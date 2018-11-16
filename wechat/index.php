@@ -1,11 +1,14 @@
 <?php
 
-$value1="abc";
-$value2="def";
+    $mysqli = new mysqli("127.0.0.1", "root", "mySQL_zhch2004"); 
 
-$res["key1"]=$value1;
-$res["key2"]=$value2;
+    if(!$mysqli)  { 
+        echo"database error"; 
+    }else{
 
-echo json_encode($res);//将数组转换为json格式并通过echo返回
+        echo "connection successfully!"
 
-?>
+    }
+
+    $mysqli->close(); 
+?> 
