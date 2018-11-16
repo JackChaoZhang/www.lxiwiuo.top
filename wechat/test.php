@@ -1,8 +1,9 @@
 <?php
-$con = mysql_connect("localhost.localdomain","lxiwiuo","mySQL_zhch2004");
+$con = mysql_connect("localhost","lxiwiuo","mySQL_zhch2004");
 if (!$con)
   {
-  die('Could not connect: ' . mysql_error());
+  //die('Could not connect: ' . mysql_error());
+  echo mysql_error();
   }
 
 mysql_select_db("lxiwiuo", $con);
